@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../utils/bmi_utils.dart';
 
 class HeightInput extends StatelessWidget {
-  final TextEditingController cmController;
+  final TextEditingController cmCtr;
   final TextEditingController meterCtr;
   final TextEditingController feetCtr;
   final TextEditingController inchCtr;
@@ -11,7 +11,7 @@ class HeightInput extends StatelessWidget {
 
   const HeightInput({
     super.key,
-    required this.cmController,
+    required this.cmCtr,
     required this.meterCtr,
     required this.feetCtr,
     required this.inchCtr,
@@ -41,7 +41,7 @@ class HeightInput extends StatelessWidget {
         const SizedBox(height: 12),
         if (unit == HeightType.cm)
           TextFormField(
-            controller: cmController,
+            controller: cmCtr,
             keyboardType: const TextInputType.numberWithOptions(decimal: true),
             decoration: const InputDecoration(
               labelText: "Height (cm)",
